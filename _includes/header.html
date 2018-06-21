@@ -1,26 +1,14 @@
-<header id="header" class="parent justify-spaceBetween">
-  <div class="inner w100 relative">
-    <span class="f-left">  
-      <a href="https://thereviewindex.com">
-        <h1>
-          <span>the</span>review<span>index</span>
-        </h1>
-      </a>
-    </span>
-    <span id="nav-links" class="absolute right bottom">
-      <!-- Nav pages -->
-	    {% for page in site.pages %}
-	      {% if page.layout == "page" %}
-	        <a href="{% if site.baseurl == "/" %}{{ page.url }}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}" title="{{ page.title }}">{{ page.title }}</a>
-	      {% endif %}
-	    {% endfor %}
-      
-      <!-- Nav links -->
-	    {% include link.html %}
-
-    </span>
-  </div>
-</header>
-
-
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <meta name="keywords" content="{% if page.keywords %}{{ page.keywords | join: ',' }}{% endif %}" />
+        <meta name="description" content="{% if page.description %}{{ page.description }}{% endif %}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %} </title>
+        <link rel="stylesheet" href="{{ site.url }}/css/default.css" type="text/css" />
+        <link rel="stylesheet" href="{{ site.url }}/css/small.css" type="text/css" media="(max-width: 720px)"/>
+        <link rel="stylesheet" href="{{ site.url }}/css/syntax.css" type="text/css" />
+        <link rel="shortcut icon" href="{{ site.url }}/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>

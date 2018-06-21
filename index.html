@@ -1,21 +1,15 @@
 ---
 layout: default
+description: Zhuang Ma's Blog
+keywords: Zhuang Ma, 马壮, mzlogin, mazhuang
 ---
-<!-- Posts -->
-<div id="posts">
 
-	{% for post in paginator.posts %}
-
-	  <div class="post">
-	  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{%if post.header %}{{ post.header }}{% else %}{{ post.title }}{% endif %}</a></h2>
-      <div class="by-line parent">
-        <time datetime="{{ post.date | date_to_xmlschema }}"> <i>{{ post.date | date_to_string }}</i> </time>
-        &nbsp;&nbsp; &middot; &nbsp;&nbsp;
-        <span><i>{{ post.duration }}</i> </span>
-      </div>
-      <p>{{ post.content | strip_html | truncatewords:50 }}</p>
-	  </div>
-
+<div class="postlist">
+    {% for post in paginator.posts %}
+    <div class="overview">
+        <div class="date">{{ post.date | date: "%b %d, %Y" }}</div>
+        <div class="detail"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></div>
+    </div>
     {% endfor %}
-
 </div>
+{% include pagination.html %}

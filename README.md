@@ -1,16 +1,16 @@
-## About
+jekyll-theme-solid
+=================
 
-[TheReviewIndex blog](https://thereviewindex.com/blog), made with Jekyll.
+A simple and clean jekyll theme without javascript.
 
-## Template used
+Online Demo: <https://mazhuang.org/jekyll-theme-solid>
 
-[Monochrome](https://github.com/dyutibarma/monochrome)
+## Screenshots
 
+* Home page
 
-## Author
+  ![home page](./images/screenshots/home.png)
 
-- TheReviewIndex
-- Web site: [Review Aggregation and Summary Site for India - TheReviewIndex](https://thereviewindex.com)
+* Post page
 
-## License
-Released under [MIT License](license.md).
+  ![post page](./images/screenshots/posts.png)
